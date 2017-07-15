@@ -69,8 +69,7 @@ public class addCartServlet extends HttpServlet {
 		cart.put(product, num+"");//把图书放入购物车
 		
 		request.getSession().setAttribute("cart", cart);//把cart对象放回到session作用域中
-		
-		pw.print("<a href='"+request.getContextPath()+"/showProductByPageServlet'>继续购物</a>，<a href='"+request.getContextPath()+"/cart.jsp'>查看购物车</a>");
+		response.sendRedirect(request.getContextPath()+"/cartRedirect.jsp");
 
 	}
 
