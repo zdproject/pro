@@ -5,6 +5,18 @@
 <head>
 <title>电子书城</title>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
+<style type="text/css">
+	#divpagecontent{width:90%;margin-left:3%;}
+	#divpagecontent hr{background:linear-gradient(to top, white, #f9c349);border:#f9c349;
+margin:auto;
+width:100%;height:2px;padding-bottom:5px;}
+	#divpagecontent table{width:90%;margin:auto;margin-top:10px;}
+	#divpagecontent td{font-size:16px;}
+	#divpagecontent td a{font-size:16px;}
+	#divpagecontent td input[type="text"]{height:20px;line-height:20px;font-size:16px;}
+	#divpagecontent td input[type="submit"]{height:20px;line-height:20px;font-size:16px;}
+	#divpagecontent td input[type="password"]{height:20px;line-height:20px;font-size:16px;}
+</style>
 </head>
 
 <body class="main">
@@ -13,9 +25,10 @@
 	<jsp:include page="menu_search.jsp" />
 
 	<div id="divpagecontent">
-		<table width="100%" border="0" cellspacing="0">
+	<hr>
+		<table border="0" cellspacing="0">
 			<tr>
-				<td width="25%">
+				<td width="20%">
 					<table width="100%" border="0" cellspacing="0"
 						style="margin-top:30px">
 						<tr>
@@ -41,7 +54,7 @@
 					</table>
 				</td>
 				<td>
-					<div style="text-align:right; margin:5px 10px 5px 0px">
+					<div style="text-align:right; margin-right:50px;">
 						<a href="index.jsp">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a
 							href="myAccount.jsp">&nbsp;我的帐户</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;&nbsp;用户信息修改
 					</div>
@@ -55,7 +68,7 @@
 							<td>
 								<form action="${pageContext.request.contextPath }/modifyUserServlet" method="post">
 									<input type="hidden" name="id" value="${uu.id }"/>
-									<table width="100%" border="0" cellspacing="2" class="upline">
+									<table width="70%" border="0" cellspacing="2" class="upline">
 										<tr>
 											<td style="text-align:right; width:20%">会员邮箱：</td>
 											<td style="width:40%; padding-left:20px">${uu.email }</td>
@@ -100,7 +113,7 @@
 										</tr>
 									</table>
  
-									<p style="text-align:center">
+									<p style="text-align:center" width="30%">
 
 										<input type="image" src="images/botton_gif_025.gif" border="0">
  

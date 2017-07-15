@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE HTML>
 <html>
 <head>
 
@@ -12,7 +12,12 @@
 	
 </script>
 </head>
+<style type="text/css">
+#divcontent hr{background:linear-gradient(to top, white, #f9c349);
+margin:auto;
+width:90%;height:2px;padding-bottom:5px;}
 
+</style>
 <body class="main" onload="startSecond()">
 
 	<jsp:include page="head.jsp"></jsp:include>
@@ -21,17 +26,19 @@
 
 
 	<div id="divcontent">
-		<table width="850px" border="0" cellspacing="0">
+	<hr>
+		<table width="80%" border="0" cellspacing="0" style="padding-left:3%; text-align:center">
 			<tr>
-				<td style="padding:30px; text-align:center"><table width="60%"
-						border="0" cellspacing="0" style="margin-top:70px">
+				<td style=" text-align:center">
+				<table width="60%"
+						border="0" cellspacing="0" style="margin-top:50px">
 						<tr>
-							<td style="width:98"><img
-								src="images/IconTexto_WebDev_009.jpg" width="128" height="128" />
+							<td style=" text-align:right"><img
+								src="images/IconTexto_WebDev_009.jpg" width="70%"  />
 							</td>
-							<td style="padding-top:30px"><font
+							<td style="padding-top:70px"><font
 								style="font-weight:bold; color:#FF0000">注册成功,别忘记激活帐户啊</font><br />
-								<br /> <a href="index.jsp"><span id="second">5</span>秒后自动为您转跳回首页</a>
+								<br /> <a href="index.jsp"><span id="second">1000</span>秒后自动为您转跳回首页</a>
 							</td>
 						</tr>
 					</table>
@@ -42,7 +49,7 @@
 
 
 
-	<div id="divfoot">
+<!-- <div id="divfoot">
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 				<td rowspan="2" style="width:10%"><img
@@ -56,8 +63,8 @@
 							2008 &copy; eShop All Rights RESERVED.</b> </font></td>
 			</tr>
 		</table>
-	</div>
-
+	</div> -->	
+<jsp:include page="foot.jsp"/>
 
 </body>
 </html>

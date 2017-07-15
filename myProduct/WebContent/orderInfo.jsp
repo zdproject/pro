@@ -6,6 +6,20 @@
 <head>
 <title>电子书城</title>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
+<style type="text/css">
+	#divpagecontent{width:90%;margin-left:3%;margin-top:10px;margin-bottom:10px;}
+	.zdFir{background:linear-gradient(to top, white, #f9c349);border:#f9c349;
+margin:auto;
+width:100%;height:2px;padding-bottom:5px;}
+#divpagecontent table{width:95%;margin:auto;margin-top:10px;}
+	#divpagecontent td{font-size:16px;}
+	#divpagecontent td a{font-size:16px;}
+	.divlisttitle {
+	line-height: 120%;
+	text-align:center;
+	}
+	
+</style>
 </head>
 
 
@@ -14,6 +28,7 @@
 	<jsp:include page="menu_search.jsp" />
 
 	<div id="divpagecontent">
+	<hr class="zdFir">
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 

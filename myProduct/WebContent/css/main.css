@@ -1,4 +1,9 @@
+
 /* CSS Document */
+
+.container-fluid{z-index:1;}
+#cc{z-index:1;}
+#content{z-index:9999;}
 .main {
 	margin: 0px 0px 30px 0px;
 	padding: 0px 0px 0px 0px;
@@ -67,17 +72,7 @@ h1 {
 	display: inline;
 }
 
-#divhead {
-	width: 100%;
-}
 
-.headtable {
-	width: 100%;
-}
-
-.headtable td {
-	padding: 10px 50px 25px 135px;
-}
 
 #divmenu {
 	width: 100%;
@@ -90,35 +85,6 @@ h1 {
 	font-size: 14px;
 }
 
-#divmenu a {
-	font-size: 14px;
-	color: #FFFFFF; /*#1E33F7*/
-	font-weight: bold;
-	padding: 10px 10px 10px 10px;
-}
-
-#divmenu a:link {
-	text-decoration: none;
-	font-weight: bold;
-}
-
-#divmenu a:visited {
-	text-decoration: none;
-	color: #FFFFFF;
-	font-weight: bold;
-}
-
-#divmenu a:hover {
-	text-decoration: none;
-	color: #999999; /*ÑÕÉ«±ä»»*/
-	font-weight: bold;
-}
-
-#divmenu a:active {
-	text-decoration: none;
-	color: #FFFFFF;
-	font-weight: bold;
-}
 
 #divsearch {
 	width: 100%;
@@ -127,27 +93,6 @@ h1 {
 	padding: 5px 0px 5px 0px;
 	color: #FFFFFF;
 	font-weight: bold;
-}
- 
-#divad {
-	width: 900px;
-	MARGIN-RIGHT: auto;
-	MARGIN-LEFT: auto;
-}
-
-#divcontent {
-	width: 900px;
-	background-color: #FCFDEF;
-	border: 1px solid #EEEDDB;
-	MARGIN-RIGHT: auto;
-	MARGIN-LEFT: auto;
-}
-
-#divpagecontent {
-	width: 900px;
-	margin-top: 10px;
-	MARGIN-RIGHT: auto;
-	MARGIN-LEFT: auto;
 }
 
 .listtitle {
@@ -247,12 +192,7 @@ h1 {
 	text-align:left;
 }
 
-#divfoot {
-	width: 100%;
-	clear: both;
-	background-color: #EFEEDC;
-	margin-top: 15px;
-}
+
 
 .ctl {
 	width: 100%;
@@ -361,13 +301,6 @@ h1 {
 	border: 1px solid #A4B5BD;
 }
 
-#logindiv {
-	background-image: url(../images/loginbg.gif);
-	width: 305px;
-	height: 361px;
-	background-repeat: no-repeat;
-	margin: 20px;
-}
 
 .carttable {
 	border: 1px solid #CCCCCC;

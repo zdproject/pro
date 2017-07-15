@@ -13,7 +13,11 @@
 	function del() {
 		document.getElementById("content").style.display="none";
 	}
- 
+	//var nameElement = document.getElementById("name");
+	//nameElement.onblur=function(){
+	//	document.getElementById("content").innerHTML='';
+		//document.getElementById("content").style.display="none";
+	//}
 	function searchName() {
 		var nameElement = document.getElementById("name");
 		//获取输入的信息
@@ -34,10 +38,9 @@
 				if(ss.length>0){
 					document.getElementById("content").style.display="block";
 					for ( var i = 0; i < ss.length && i < 5 ; i++) {
-						document.getElementById("content").innerHTML += "<div onclick='fillNameValue(this)'  onmouseover='changeBackground_over(this)' onmouseout='changeBackground_out(this)'>"
+						document.getElementById("content").innerHTML += "<div onclick='fillNameValue(this)'>"
 								+ ss[i] + "</div>"
 					} 
-					document.getElementById("content").innerHTML += "<div onclick='del()' onmouseover='changeBackground_over(this)' onmouseout='changeBackground_out(this)' style='font-size:18px;text-align:center;color:#cccccc;padding-top:3px;padding-bottom:3px;'>x</div>"
 				} 
 			}  
 		};
@@ -49,65 +52,92 @@
 		//3.send方法发送内容（若通过get传递，则填null）
 		xmlhttp.send(null);
 	};
-	
-	function changeBackground_over(div){
-		div.style.background="gray";
-	}
-	 
-	function changeBackground_out(div){
-		div.style.background="white";
-	}
-
+	var con=document.getElementById('content');
+	var nameElement = document.getElementById("name");
+	document.addEventListener('click',function(event){
+		if(event.target==con){nameElement.valeu=con.innerHTML;del()}
+		else if(event.target!=nameElement){del()};
+	},false
+	)
 </script>
-
-<div id="divmenu">
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=literature">脑</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=life">子</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=computer">是</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=english">个</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=经管">好</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=励志">东</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=社科">西</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=学术">，</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=少儿">可</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=艺术">惜</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=原版" style="font-size:25px;">李</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=科技" style="font-size:18px;">敏</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=考试">没</a>
-	<a
-		href="${pageContext.request.contextPath}/showProductByPageServlet?category=生活百科">有</a>
+<style  type="text/css">
+	#zdSearch{
+		width:100%;	
+		height:150px;
+		overflow:hidden;
+		margin-bottom:5px;
+	}
+	#zdSearch:after{
+		content:'';
+		display:block;
+		clear:all;
+	}
+	#zdImg{width:25%;float:left;height:150px;}
+	#zdImg img{width:50%;margin-top:15px;}
+	#serbar{width:75%;float:left;height:150px;}
+	#serbar form{width:50%;margin-top:20px;}
+	#name{width:85%}
+	#serchBnt{width:15%;background:#f9c349;}
+	#serchBnt:hover{background:#f4b03b;border:2px solid #f4b03b;}
+	#name,#serchBnt{height:40px;font:"微软雅黑";font-size:16px;border:2px solid #f9c349;margin:0px;padding:0px}
+	.btnS{width:100%;height:30px;color:#e28b1b;border:none;
+		line-height:30px;float:left;font-size:16px;}
+	#zdMore ul{list-style:none;}
+	#zdMore li{float:left;border-right:1px solid lightgray;padding:0px 5px;color:gray;}
+	#zdMore li a{color:gray;}
+	#zdMore{margin-left:3%;}
+	#content div{
+		height:20px;line-height:20px;width:85%;text-align:left;
+		font-size:18px;
+		padding:0px 5px;
+		background:white;
+	}
+	#content div:hover{background:gray;}
+	#zdAside{
+		width:35px;
 		
-	<a href="${pageContext.request.contextPath}/showProductByPageServlet" style="color:#FFFF00">！&nbsp;！&nbsp;！</a>
-</div>
-<div id="divsearch">
-	<form action="${pageContext.request.contextPath}/findProductBySearchServlet"
+		position:fixed;
+		right:0px;top:0px;
+		background:#40444e;
+		font-size:16px;
+		z-index:9999;
+	}
+	#zdAside{height:100%;}
+	#gouwuche{height:45%;display:flex;flex-direction:column-reverse;}
+	#guanzhu{height:45%;display:flex;align-items:center;}
+	#huidao{height:10%;display:flex;align-items:center;}
+</style>
+<div id="zdSearch">
+	<div id="zdImg"><img src="images/ricelogo.jpg" />
+	</div>
+	<div id="serbar">
+		<form action="${pageContext.request.contextPath}/findProductBySearchServlet"
 		method="post">
-		<table width="100%" border="0" cellspacing="0">
-			<tr>
-				<td style="text-align:right; padding-right:220px">
-				Search <input
-					type="text" name="name" class="inputtable"  onkeyup="searchName();"
-					id="name" autocomplete="off" /> 
-					<input type="image" src="images/serchbutton.gif"
-					border="0" style="margin-bottom:-4px">
-				</td>
-			</tr>
-		</table> 
+			<marquee class='btnS'>现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!
+				&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!</marquee><input type="text" placeholder="请输入搜索商品的名称" name="searchText" 
+			onkeyup="searchName();" id="name" autocomplete="off"/><input type="button" value="搜索" id="serchBnt"/>
+		<div id="content"></div>
+		</form>
+		<div id="zdMore">
+			<ul>
+				<li><a href="#">五常稻花香</a></li>
+				<li><a href="#">长粒香</a></li>
+				<li><a href="#">有机大米</a></li>
+				<li><a href="#">鸭稻米</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="zdAside">
+	<div id="gouwuche"><img src="zdImg/gouwu.png" onMouseOver="this.src='zdImg/gouwuche2.png'" onMouseOut="this.src='zdImg/gouwu.png'"/></div>
+	<div id="guanzhu"><img src="zdImg/guanzhu.png" onMouseOver="this.src='zdImg/guanzhu2.png'" onMouseOut="this.src='zdImg/guanzhu.png'"/></div>
+	<div id="huidao"><img src="zdImg/huidao.png" onMouseOver="this.src='zdImg/huidao2.png'" onMouseOut="this.src='zdImg/huidao.png'"/></div>
+</div>
+<script  type="text/javascript">
+	
+	
+</script>
+		
 
-	</form>
-</div>
-<div id="content"  style="position:absolute;z-index:999;background-color:white;width:128px; text-align:left;margin-left:945px;color:black;float:left;margin-top: -20px;display: none">
-</div>
+
+

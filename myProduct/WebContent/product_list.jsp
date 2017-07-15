@@ -9,6 +9,21 @@
 <%--导入css --%>
 <link rel="stylesheet"
 	href="${pageContext.request.contextPath }/css/main.css" type="text/css" />
+	
+<style type="text/css">
+	#divpagecontent{width:90%;margin-left:3%;margin-top:10px;margin-bottom:10px;}
+	.zdFir{background:linear-gradient(to top, white, #f9c349);border:#f9c349;
+margin:auto;
+width:100%;height:2px;padding-bottom:5px;}
+#divpagecontent table{width:95%;margin:auto;margin-top:10px;}
+	#divpagecontent td{font-size:16px;}
+	#divpagecontent td a{font-size:16px;}
+	.divlisttitle {
+	line-height: 120%;
+	text-align:center;
+	}
+	
+</style>
 </head>
 
 <body class="main">
@@ -17,11 +32,12 @@
 	<jsp:include page="menu_search.jsp" />
 
 	<div id="divpagecontent">
-		<table width="100%" border="0" cellspacing="0">
+	<hr class="zdFir">
+		<table border="0" cellspacing="0">
 			<tr>
 
 				<td>
-					<div style="text-align:right; margin:5px 10px 5px 0px">
+					<div style="text-align:right; margin-right:50px;">
 						<a href="index.jsp">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;&nbsp;计算机&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;&nbsp;图书列表
 					</div>
 

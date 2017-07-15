@@ -4,20 +4,34 @@
 <html>
 <head>
 <title>在线支付</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" />
 
+<script type="text/javascript" src="js/my.js">
+	
+</script>
 <meta http-equiv="pragma" content="no-cache">
 <meta http-equiv="cache-control" content="no-cache">
 <meta http-equiv="expires" content="0">
 <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
 <meta http-equiv="description" content="This is my page">
-
+<style type="text/css">
+	form{width:70%;margin:auto;margin-top:20px;text-align:center;}
+	.divBank{margin-top:10px;border-top:1px solid #f9c349;
+		border-bottom:1px solid #f9c349;padding:10px;
+	}
+	form input[type="text"]{height:30px;line-height:30px;font-size:14px;
+		border:1px solid #63c425;
+	}
+</style>
 
 </head>
 
 <body>
+	<jsp:include page="head.jsp" />
+	
 	<form action="paysuccess.jsp" method="post">
-		订单号：<INPUT TYPE="text" NAME="orderid" value="001"> 支付金额：<INPUT
-			TYPE="text" NAME="money" value="1000">元
+		订单号：<INPUT TYPE="text" NAME="orderid" value="001" readonly="readonly"> 支付金额：<INPUT
+			TYPE="text" NAME="money" value="1000" readonly="readonly">元
 		<div class="divBank">
 			<div class="divText">选择网上银行</div>
 			<div style="margin-left: 20px;">
@@ -118,9 +132,9 @@
 						src="bank_img/zheshang.bmp" />
 				</div>
 			</div>
-			<div style="margin: 40px;">
-				<INPUT TYPE="submit" value="确定支付">
-			</div>
+			<div style="margin:auto;border-radius:5px;width:180px;height:40px;text-align:center;line-height:40px;background:#63c425" onmouseout="this.style.backgroundColor='#63c425'" onmouseover="this.style.backgroundColor='#5ab122'">
+										<a href="#" style="color:white;font-size:16px;">确认支付	</a>
+									</div>
 		</div>
 	</form>
 </body>

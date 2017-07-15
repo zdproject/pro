@@ -5,6 +5,16 @@
 <head>
 <title>电子书城</title>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
+
+<style type="text/css">
+	#divpagecontent{width:90%;margin-left:3%;margin-top:10px;margin-bottom:10px;}
+	#divpagecontent hr{background:linear-gradient(to top, white, #f9c349);border:#f9c349;
+margin:auto;
+width:100%;height:2px;padding-bottom:5px;}
+#divpagecontent table{width:90%;margin:auto;margin-top:10px;}
+	#divpagecontent td{font-size:16px;}
+	#divpagecontent td a{font-size:16px;}
+</style>
 </head>
 
 <body class="main">
@@ -12,6 +22,7 @@
 	<jsp:include page="menu_search.jsp" />
 
 	<div id="divpagecontent">
+	<hr>
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 				<td width="25%"><table width="100%" border="0" cellspacing="0"
@@ -41,7 +52,7 @@
 
 					</table>
 				</td>
-				<td><div style="text-align:right; margin:5px 10px 5px 0px">
+				<td><div style="text-align:right; margin-right:50px;">
 						<a href="index.jsp">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;<a
 							href="myAccount.jsp">&nbsp;我的帐户</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;&nbsp;订单查询
 					</div>
@@ -89,7 +100,7 @@
 
 
 
-	<div id="divfoot">
+<!-- 	<div id="divfoot">
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 				<td rowspan="2" style="width:10%"><img
@@ -106,8 +117,8 @@
 				</td>
 			</tr>
 		</table>
-	</div>
+	</div> -->
 
-
+<jsp:include page="foot.jsp" />
 </body>
 </html>

@@ -1,13 +1,26 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+
+<script type="text/javascript" src="js/my.js">
+	
+</script>
+<style type="text/css">
+	#zdPay{width:90%;margin-left:3%;border:1px solid black;margin-top:20px;padding:10px 0px 10px 10px;}
+	#zdPay h3{border-bottom:1px solid black;padding:2px 0px;}
+	#zdPay input{height:30px;line-height:30px;margin-top:5px;}
+	#zdPay input[type="submit"]{height:30px;margin-left:30px;padding:2px;}
+	#zdPay input[type="submit"]:hover{box-shadow:1px 1px 10px #f9c349}
+</style>
 </head>
 <body>
+	<%@include file="head.jsp"%>
+	<div id="zdPay">
 	<p:user />
 	<!-- 确认支付form -->
 	<form action="https://www.yeepay.com/app-merchant-proxy/node"
@@ -28,6 +41,7 @@
 			name="pr_NeedResponse" value="${pr_NeedResponse }" /> <input
 			type="hidden" name="hmac" value="${hmac }" /> <input type="submit"
 			value="确认支付" />
-	</form>
+	</form></div>
+	<%@include file="foot.jsp"%>
 </body>
 </html>

@@ -5,6 +5,12 @@
 <head>
 <title>电子书城</title>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
+<style type="text/css">
+	#divpagecontent{width:90%;margin-left:3%;}
+	#divpagecontent hr{background:linear-gradient(to top, white, #f9c349);
+margin:auto;
+width:100%;height:2px;padding-bottom:5px;}
+</style>
 </head>
 
 <body class="main">
@@ -13,6 +19,7 @@
 
 	<jsp:include page="menu_search.jsp" />
 	<div id="divpagecontent">
+		<hr>
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 				<td width="25%"><table width="100%" border="0" cellspacing="0"

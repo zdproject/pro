@@ -7,8 +7,13 @@
 <title>电子书城</title>
 <link rel="stylesheet" href="css/main.css" type="text/css" />
 
+<style type="text/css">
+#divpagecontent{width:90%;margin-left:3%;margin-top:10px;margin-bottom:10px;}
+#divpagecontent #zdhr{background:linear-gradient(to top, white, #f9c349);
+margin:auto;
+height:2px;padding-bottom:5px;}
 
-
+</style>
 </head>
 
 
@@ -18,6 +23,7 @@
 	<jsp:include page="menu_search.jsp" />
 
 	<div id="divpagecontent">
+		<hr id="zdhr">
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 
@@ -70,7 +76,7 @@
 															style="color:#FF0000">合计：&nbsp;&nbsp;${count }元</font></td>
 													</tr>
 													<input type="hidden" name="money" value="${count }"/>
-												</table>
+												</table style="margin-bottom:10px;">
 
 												<p>
 													收货地址：<input name="receiverAddress" type="text" value="${customerInfo.address }"

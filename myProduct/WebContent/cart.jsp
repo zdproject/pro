@@ -27,7 +27,20 @@
 		location.href="${pageContext.request.contextPath}/changeNumServlet?id="+id+"&num="+num;
 	}
 </script>
+<style type="text/css">
 
+#divpagecontent hr{background:linear-gradient(to top, white, #f9c349);
+margin:auto;
+width:100%;height:2px;padding-bottom:5px;border:#f9c349}
+#divpagecontent {
+	width:90%;
+	margin-top: 10px;
+	
+	MARGIN-LEFT: 3%;
+}
+#divpagecontent td{font-size:14px;}
+
+</style>
 </head>
 
 <body class="main">
@@ -38,6 +51,7 @@
 
 
 	<div id="divpagecontent">
+	<hr>
 		<table width="100%" border="0" cellspacing="0">
 			<tr>
 
@@ -47,12 +61,9 @@
 
 					<table cellspacing="0" class="infocontent">
 						<tr>
-							<td><img src="ad/page_ad.jpg" width="666" height="89" />
+							<td><img src="" alt="tupian1" width="100%" height="89" />
 								<table width="100%" border="0" cellspacing="0">
-									<tr>
-										<td><img src="images/buy1.gif" width="635" height="38" />
-										</td>
-									</tr>
+									
 									<tr>
 										<td>
 											<table cellspacing="1" class="carttable">

@@ -10,6 +10,12 @@
 <script type="text/javascript" src="js/my.js">
 	
 </script>
+<style type="text/css">
+#divcontent hr{background:linear-gradient(to top, white, #f9c349);
+margin:auto;
+width:100%;height:2px;padding-bottom:5px;border:#f9c349;}
+#divcontent{width:90%;margin-left:3%;}
+</style>
 </head>
 
 <body class="main" onload="startSecond();">
@@ -17,7 +23,8 @@
 	<jsp:include page="head.jsp" />
 	<jsp:include page="menu_search.jsp" />
 	<div id="divcontent">
-		<table width="850px" border="0" cellspacing="0">
+	<hr>
+		<table width="80%" border="0" cellspacing="0">
 			<tr>
 				<td style="padding:30px; text-align:center"><table width="60%"
 						border="0" cellspacing="0" style="margin-top:70px">
@@ -27,7 +34,7 @@
 							</td>
 							<td style="padding-top:30px"><font
 								style="font-weight:bold; color:#FF0000">添加到购物车成功</font><br /> <br />
-								<span id="second">500</span>秒后自动为您转跳到购物页面 <br/><br />
+								<span id="second">5</span>秒后自动为您转跳到购物页面 <br/><br />
 								<div>
 									<div style="float:left;border-radius:5px;width:90px;height:30px;text-align:center;line-height:30px;background:#63c425" onmouseout="this.style.backgroundColor='#63c425'" onmouseover="this.style.backgroundColor='#5ab122'">
 										<a href="${pageContext.request.contextPath }/showProductByPageServlet" style="color:white">继续购物</a>
