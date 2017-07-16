@@ -108,17 +108,29 @@
 	#huidao{height:10%;display:flex;align-items:center;}
 </style>
 <div id="zdSearch">
+<<<<<<< HEAD
 	<div id="zdImg"><a href="index.jsp" style="display:block;"><img src="images/ricelogo.jpg" /></a>
+=======
+	<div id="zdImg"><img src="images/ricelogo.jpg" />
+>>>>>>> origin/master
 	</div>
 	<div id="serbar">
 		<form action="${pageContext.request.contextPath}/findProductBySearchServlet"
 		method="post">
 			<marquee class='btnS'>现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!
+<<<<<<< HEAD
 				&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!</marquee><input type="text" placeholder="请输入搜索商品的名称" name="searchText" 
 			onkeyup="searchName();" id="name" autocomplete="off"/><input type="button" value="搜索" id="serchBnt"/>
 		<div id="content"></div>
 		</form>
 		<div id="zdMore">
+=======
+				&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!</marquee>
+				<input type="text" placeholder="请输入搜索商品的名称" name="searchText" onkeyup="searchName();" id="name" autocomplete="off"/><input type="button" value="搜索" id="serchBnt"/>
+			<div id="content"></div>
+		</form>
+		<div id="zdMore"> 
+>>>>>>> origin/master
 			<ul>
 				<li><a href="#">五常稻花香</a></li>
 				<li><a href="#">长粒香</a></li>
@@ -129,6 +141,7 @@
 	</div>
 </div>
 <div id="zdAside">
+<<<<<<< HEAD
 	<div id="gouwuche">
 	<a href="${pageContext.request.contextPath }/lookCartServlet"><img src="zdImg/gouwu.png" onMouseOver="this.src='zdImg/gouwuche2.png'" onMouseOut="this.src='zdImg/gouwu.png'"/></a></div>
 	<div id="guanzhu">
@@ -155,6 +168,14 @@
 			 alert("加入收藏夹失败，请使用Ctrl+D快捷键进行添加操作!");     
 			  }
 	}
+=======
+	<div id="gouwuche"><img src="zdImg/gouwu.png" onMouseOver="this.src='zdImg/gouwuche2.png'" onMouseOut="this.src='zdImg/gouwu.png'"/></div>
+	<div id="guanzhu"><img src="zdImg/guanzhu.png" onMouseOver="this.src='zdImg/guanzhu2.png'" onMouseOut="this.src='zdImg/guanzhu.png'"/></div>
+	<div id="huidao"><img src="zdImg/huidao.png" onMouseOver="this.src='zdImg/huidao2.png'" onMouseOut="this.src='zdImg/huidao.png'"/></div>
+</div>
+<script  type="text/javascript">
+	
+>>>>>>> origin/master
 	
 </script>
 		

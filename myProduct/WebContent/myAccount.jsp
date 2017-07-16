@@ -49,9 +49,9 @@ width:100%;height:2px;padding-bottom:5px;}
 							href="myAccount.jsp">&nbsp;我的帐户</a>&nbsp;&nbsp;&nbsp;&nbsp;&gt;&nbsp;&nbsp;&nbsp;&nbsp;欢迎
 					</div>
 					<table cellspacing="0" class="infocontent">
-						<tr>
-							<td style="padding:20px"><p>
-									<img src="ad/myad.jpg" width="631" height="436" />
+						<tr> 
+							<td style="padding:20px"><p>  
+									<img src="ad/myad.jpg" width="631" height="436" />  
 								</p>
 							</td>
 						</tr>

@@ -36,7 +36,7 @@ public class SendJMail {
 				//设置发件人的地址
 				message.setFrom(new InternetAddress(from));
 				//设置主题
-				message.setSubject("韩敏网激活");
+				message.setSubject("东北米小二网激活");
 				//设置邮件的文本内容
 				//message.setText("Welcome to JavaMail World!");
 				message.setContent(emailMsg,"text/html;charset=utf-8");// 注册成功，请点击<a href='http://www.product.com?activeCode=ffddff14'>http://localhost:8080/myProduct?activeCode=ffddff14</a>激活后登录

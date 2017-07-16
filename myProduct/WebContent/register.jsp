@@ -20,6 +20,7 @@
 	function searchEmail( str ){
 		var emailMessage = document.getElementById("emailMessage");
 		if(/^\w+(.\w+)?@\w+(.\w)\w+$/g.test(str)){
+<<<<<<< HEAD
 			
 		
 		if(""!=str){
@@ -37,16 +38,39 @@
 						emailMessage.innerHTML = "<span style='color:red'>该邮箱已被使用 </span>";
 					}
 				} 
+=======
+			if(""!=str){
+				//1-创建XMLHttpRequest对象
+				var xhr = getXMLHttpRequest();
+				
+				//4-处理结果
+				xhr.onreadystatechange=function(){
+					if( xhr.readyState==4 && xhr.status==200 ){	//请求和服务器响应正常
+						
+					
+						if("yes"==xhr.responseText){
+							emailMessage.innerHTML = "<span style='color:green'>该邮箱未被使用</span>";
+						}else{
+							emailMessage.innerHTML = "<span style='color:red'>该邮箱已被使用 </span>";
+						}
+					} 
+				}
+				//2-创建连接
+				xhr.open( "GET" , "${pageContext.request.contextPath }/searchEmailServlet?email="+str , true );
+				
+				//3-发送请求
+				xhr.send( ); 
+>>>>>>> origin/master
 			}
-			//2-创建连接
-			xhr.open( "GET" , "${pageContext.request.contextPath }/searchEmailServlet?email="+str , true );
-			
-			//3-发送请求
-			xhr.send( ); 
-		}
 		}else{
 			emailMessage.innerHTML = "<span style='color:red'>邮箱格式不正确！ </span>";
 		}
+<<<<<<< HEAD
+		}else{
+			emailMessage.innerHTML = "<span style='color:red'>邮箱格式不正确！ </span>";
+		}
+=======
+>>>>>>> origin/master
 	} 
 </script>
 </head>
@@ -109,7 +133,11 @@
 		<form action="${pageContext.request.contextPath}/register"
 			method="post">
 			<h1>新会员注册 ${user_msg }</h1><br><br><br>
+<<<<<<< HEAD
 			<label>会员邮箱：</label><input type="email" name="text" onblur="searchEmail(this.value)" />
+=======
+			<label>会员邮箱：</label><input type="text" name="email" onblur="searchEmail(this.value)" />
+>>>>>>> origin/master
 			<span id="emailMessage" style="color:#999999" class="zdnn">请输入合法的邮箱</span><br><br>
 			<label>会员名：</label><input type="text" name="username" />
 			<font color="#999999" class="zdnn">用户名设置至少6位</font><br><br>
@@ -118,9 +146,15 @@
 			<label>重复密码：</label><input type="password" name="repassword" /><br><br>
 			<label id="excp" ><font>性别：</font>
 				<label><input type="radio" name="gender" value="男" checked="checked">男</label>
+<<<<<<< HEAD
 				&nbsp;&nbsp;<label><input type="radio" name="gender" value="女" checked="checked">女</label>
 			</label><br><br>
 			<label>重复密码：</label><input type="text" name="telephone" /><br><br>
+=======
+				&nbsp;&nbsp;<label><input type="radio" name="gender" value="女">女</label>
+			</label><br><br>
+			<label>联系电话：</label><input type="text" name="telephone" /><br><br>
+>>>>>>> origin/master
 			<label id="zdex">个人介绍：</label><textarea class="zdtxt" name="introduce" rows="1" cols=""></textarea><br>
 			<br><hr><br>
 			<h1>注册校验</h1>

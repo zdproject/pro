@@ -10,7 +10,11 @@
 <style type="text/css">
 #divpagecontent{width:90%;margin-left:3%;margin-top:10px;margin-bottom:10px;}
 #divpagecontent #zdhr{background:linear-gradient(to top, white, #f9c349);
+<<<<<<< HEAD
 margin:auto;border:#f9c349;
+=======
+margin:auto;
+>>>>>>> origin/master
 height:2px;padding-bottom:5px;}
 
 </style>

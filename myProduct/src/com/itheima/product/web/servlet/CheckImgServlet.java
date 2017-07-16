@@ -35,7 +35,7 @@ public class CheckImgServlet extends HttpServlet {
 		// web工程中读取 文件，必须使用绝对磁盘路径
 		String path = getServletContext().getRealPath("/WEB-INF/new_words.txt");
 		try {
-			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF-8"));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(path), "GBK"));
 			String line;
 			while ((line = reader.readLine()) != null) {
 				words.add(line);
