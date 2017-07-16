@@ -38,7 +38,7 @@
 			<ul>
 				<li><a href="login.jsp">登录</a></li>
 				<li><a href="register.jsp">新用户注册</a></li>
-				<li><a href="myAccount.jsp">个人中心</a></li>
+				<li><a href="${pageContext.request.contextPath }/personalInfoServlet">个人中心</a></li>
 				<li><img src="images/cart.gif" /> <a
 				href="${pageContext.request.contextPath }/lookCartServlet"> 购物车</a></li>
 			</ul>

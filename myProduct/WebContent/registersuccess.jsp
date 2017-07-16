@@ -38,7 +38,7 @@ width:90%;height:2px;padding-bottom:5px;}
 							</td>
 							<td style="padding-top:70px"><font
 								style="font-weight:bold; color:#FF0000">注册成功,别忘记激活帐户啊</font><br />
-								<br /> <a href="index.jsp"><span id="second">1000</span>秒后自动为您转跳回首页</a>
+								<br /> <a href="index.jsp"><span id="second">10</span>秒后自动为您转跳回首页</a>
 							</td>
 						</tr>
 					</table>

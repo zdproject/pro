@@ -17,7 +17,7 @@ public class UserService {
 		
 		try {
 			ud.addUser(user);
-			String emailMsg = "注册成功，请点击链接<a href='http://www.product.com?activeCode="+user.getActiveCode()+"'>http://localhost:8080/myProduct/ActiveServlet?activeCode="+user.getActiveCode()+"</a>激活后登录";
+			String emailMsg = "注册成功，请点击链接<a href='59.110.235.46/myProduct?activeCode="+user.getActiveCode()+"'>http://59.110.235.46/myProduct/ActiveServlet?activeCode="+user.getActiveCode()+"</a>激活后登录";
 			SendJMail.sendMail(user.getEmail(),emailMsg);
 		} catch (SQLException e) {
 			e.printStackTrace();

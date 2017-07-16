@@ -114,11 +114,11 @@
 		<form action="${pageContext.request.contextPath}/findProductBySearchServlet"
 		method="post">
 			<marquee class='btnS'>现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!
-				&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!</marquee><input type="text" placeholder="请输入搜索商品的名称" name="searchText" 
-			onkeyup="searchName();" id="name" autocomplete="off"/><input type="button" value="搜索" id="serchBnt"/>
-		<div id="content"></div>
+				&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!&nbsp;&nbsp;&nbsp;&nbsp;现在是一个测试环节哟，测试环节哟哟!</marquee>
+				<input type="text" placeholder="请输入搜索商品的名称" name="searchText" onkeyup="searchName();" id="name" autocomplete="off"/><input type="button" value="搜索" id="serchBnt"/>
+			<div id="content"></div>
 		</form>
-		<div id="zdMore">
+		<div id="zdMore"> 
 			<ul>
 				<li><a href="#">五常稻花香</a></li>
 				<li><a href="#">长粒香</a></li>
